@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Cek | Khodam</title>
+    <link
+      rel="shortcut icon"
+      href="Ucup-removebg-preview.png"
+      type="image/x-icon"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-image: url(howak.jpg);
+  
+        font-family: "Exo 2", sans-serif;
+      }
+      .container {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      input[type="text"] {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 7px;
+        width: 95%;
+        color: rgb(55 65 81);
+      }
+      button {
+        padding: 10px 20px;
+        border: none;
+        background-color: rgb(31 41 55);
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-family: "Exo 2", sans-serif;
+        transition: 0.3s;
+      }
+      button:hover {
+        background-color: rgb(243 244 246);
+        color: black;
+      }
+      #result {
+        margin-top: 20px;
+      }
+      .loading {
+        display: none;
+        margin-top: 20px;
+        color: rgb(31 41 55);
+        font-family: "Exo 2", sans-serif;
+      }
+      .result {
+        font-family: "Exo 2", sans-serif;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+      }
+      #text {
+        padding: 10px;
+        display: none;
+      }
+      .text {
+        background-color: crimson;
+        font-family: "Exo 2", sans-serif;
+        border-radius: 7px;
+        color: rgb(243 244 246);
+        display: block;
+        width: 80%;
+        margin: auto;
+        font-size: 40px; /* Pastikan elemen tersembunyi pada awalnya */
+        animation: fadeIn 1s ease-in-out forwards;
+      }
+      .refresh {
+        justify-content: left;
+        width: 50px;
+        padding: 6px;
+        border-radius: 7px;
+        color: #fff;
+        background-color: rgb(31 41 55);
+        font-size: 15px;
+        transition: 0.3s;
+      }
+      .refresh:hover {
+        background-color: rgb(243 244 246);
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a class="refresh" id="resetButton">Reset</a>
+      <h1>Cek Khodam Anda</h1>
+      <p>Masukkan nama Anda dan lihatlah khodam anda!</p>
+      <input type="text" id="nameInput" placeholder="Masukkan nama Anda" />
+      <button onclick="showLoading()">Cek Sekarang</button>
+      <div class="loading" id="loading">Loading...</div>
+      <div class="result" id="result"></div>
+      <h3 class="text" id="hasil"></h3>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
